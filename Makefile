@@ -2,7 +2,7 @@
 # Use of this source code is governed by a MIT-style
 # license that can be found in the LICENSE file.
 
-APP?=awapp
+APP?=k8sapp
 PROJECT=github.com/aywan/k8sapp
 REGISTRY?=registry.k8s.community
 CA_DIR?=certs
