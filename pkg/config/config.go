@@ -11,7 +11,7 @@ import (
 
 const (
 	// SERVICENAME contains a service name prefix which used in ENV variables
-	SERVICENAME = "AWAPP"
+	SERVICENAME = "K8SAPP"
 )
 
 // Config contains ENV variables

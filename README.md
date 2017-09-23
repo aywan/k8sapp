@@ -1,4 +1,4 @@
-# Kubernetes `awapp` application
+# Kubernetes `k8sapp` application
 Разработанный демо-сервис в рамках "Kubernetes community" workshop.
                 
 Service owner: Ivan Bragin (aywan@aywan.ru)

@@ -1,4 +1,4 @@
-## Default values for awapp.
+## Default values for k8sapp.
 ## This is a YAML-formatted file.
 ## Declare variables to be passed into your templates.
 
@@ -35,7 +35,7 @@ image:
   ## Docker Registry/Hub image name and tag
   ##
   registry: registry.k8s.community
-  name: awapp
+  name: k8sapp
   tag: 0.0.1
 
   ## Docker Registry/Hub auth secret name, always use `registry-pull-secret` if registry inside if k8s
@@ -67,15 +67,15 @@ ingress:
   ##
   hostBased:
     hosts:
-    # - awapp.k8s.community
+    # - k8sapp.k8s.community
 
     ## Ingress TLS configuration
     ## Secrets must be manually created in the namespace
     ##
     tls:
-    # - secretName: awapp-tls-secret
+    # - secretName: k8sapp-tls-secret
     #   hosts:
-    #   - awapp.k8s.community
+    #   - k8sapp.k8s.community
 
   ## Ingress path feature allow access to service through path 
   ## example: https://hostname/namespace/servicename
@@ -97,7 +97,7 @@ ingress:
 service:
   ## App container name
   ##
-  name: awapp
+  name: k8sapp
   
   ## Service Type
   ## For minikube, set this to NodePort, elsewhere use ClusterIP

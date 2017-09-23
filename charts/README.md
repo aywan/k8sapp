@@ -1,4 +1,4 @@
-awapp: A helm charts for Kubernetes application
+k8sapp: A helm charts for Kubernetes application
 ================================================
 
 Run of deployment for the service that satisfied of Kubernetes requirements

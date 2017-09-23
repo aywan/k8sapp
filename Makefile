@@ -12,9 +12,9 @@ RELEASE?=0.0.1
 GOOS?=linux
 GOARCH?=amd64
 
-AWAPP_LOCAL_HOST?=0.0.0.0
-AWAPP_LOCAL_PORT?=8080
-AWAPP_LOG_LEVEL?=0
+K8SAPP_LOCAL_HOST?=0.0.0.0
+K8SAPP_LOCAL_PORT?=8080
+K8SAPP_LOG_LEVEL?=0
 
 # Namespace: dev, prod, release, cte, username ...
 NAMESPACE?=k8s-community
@@ -69,10 +69,10 @@ push: build
 .PHONY: run
 run: build
 	@echo "+ $@"
-	@docker run --name ${CONTAINER_NAME} -p ${AWAPP_LOCAL_PORT}:${AWAPP_LOCAL_PORT} \
-		-e "AWAPP_LOCAL_HOST=${AWAPP_LOCAL_HOST}" \
-		-e "AWAPP_LOCAL_PORT=${AWAPP_LOCAL_PORT}" \
-		-e "AWAPP_LOG_LEVEL=${AWAPP_LOG_LEVEL}" \
+	@docker run --name ${CONTAINER_NAME} -p ${K8SAPP_LOCAL_PORT}:${K8SAPP_LOCAL_PORT} \
+		-e "K8SAPP_LOCAL_HOST=${K8SAPP_LOCAL_HOST}" \
+		-e "K8SAPP_LOCAL_PORT=${K8SAPP_LOCAL_PORT}" \
+		-e "K8SAPP_LOG_LEVEL=${K8SAPP_LOG_LEVEL}" \
 		-d $(CONTAINER_IMAGE):$(RELEASE)
 	@sleep 1
 	@docker logs ${CONTAINER_NAME}
